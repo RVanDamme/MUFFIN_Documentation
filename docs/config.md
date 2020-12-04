@@ -70,6 +70,14 @@ If you want to create new profile (more advanced use of the nextflow configurati
 We recommend the creation of a specific configuration file in the configs directory and you call it in the nextflow.config file.
 Please read the documentation provided by [nextflow](https://www.nextflow.io/docs/latest/config.html) about the configuration of a pipeline before attempting any modification.
 
+If you implement a new profile, you will also need to edit the main.nf file and add
+below line 113 if it's a engine or line 121 if it's an executer the following:
+
+```
+    workflow.profile.contains('new_profile_name') ||
+```
+This is to integrate the profile in the error handling
+
 To implement an executor profile we highly recommend to read the documentation provided by [nextflow](https://www.nextflow.io/docs/latest/executor.html) profile.
 Once you now the different parameter required for your executer, you can add a profile after the line 54 using the following format.
 
