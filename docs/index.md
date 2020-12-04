@@ -14,15 +14,15 @@ A preprint is available here https://www.biorxiv.org/content/10.1101/2020.02.08.
     - [conda usage](installation.md#for-conda-usage)
     - [gcloud usage](installation.md#for-gcloud-usage)
     - [containers usage](installation.md#for-containers-usage)
-    - [software installe locally](installation.md#for-usage-of-software-installed-locally)
+    - [software installed locally](installation.md#for-usage-of-software-installed-locally)
 4. [Test the pipeline](installation.md#test-the-pipeline)
 5. [Manual configuration](config.md#manual-configuration)
-6. [Usage](usage.md#usage) :
-    - [Basic usage](usage.md#basic-usage)
-    - [Advanced usage](usage.md#advanced-usage)
+6. [Usage](usage/usage.md#usage) :
+    - [Basic usage](usage/usage.md#basic-usage)
+    - [Advanced usage](usage/usage.md#advanced-usage)
 7. [Troubleshooting](troubleshooting.md#troubleshooting)
-8. [Options](usage.md#options)
-9. [Complete help and options](usage.md#complete-help-and-options)
+8. [Options](usage/usage.md#options)
+9. [Complete help and options](usage/usage.md#complete-help-and-options)
 10. [Bibliography](#bibliography)
 11. [License](#license)
 
