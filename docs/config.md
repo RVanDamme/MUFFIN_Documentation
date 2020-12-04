@@ -1,6 +1,13 @@
 ## Manual Configuration
 
-### Current parameter to change
+1. [Current parameter to change](#current-parameter-to-change)
+2. [Edit existing profiles](#edit-existing-profiles) :
+    - [The cpu/ram usage in cloud and local profiles](#1.-The-cpu/ram-usage-in-cloud-and-local-profiles)
+    - [The gcloud configuration](#2.-The-gcloud-configuration)
+3. [Create new profile](#Create-new-profile) :
+
+
+## Current parameter to change
 Currently we have the nextflow.config file that contains every parameter and configuration currently available.
 If you want to edit here is a small guide to the different option to change with the line number in parenthesis:
 * Change default cpus and ram edit those lines (7-8)
@@ -33,17 +40,18 @@ If you don't want a default for a parameter change to "false" use simple quote t
     output = './results'
 ```
 
-### Edit existing profiles
+## Edit existing profiles
 You can edit and configure existing profiles to work for you.
 The different parameter you can edit are:
-1. The cpu/ram usage in cloud and local profiles.
+
+### 1. The cpu/ram usage in cloud and local profiles
 To do so just open the cloud.config or local.config in the configs directory and change the value.
 ```
     withLabel: bwa { cpus = params.cpus ; memory = params.memory } # this calls the parameter defined in nextflow.config
     withLabel: bwa { cpus = 8 ; memory = '30g'}  # this is a user defined value
 ```
 
-2. The gcloud configuration
+### 2. The gcloud configuration
 Please read the nextflow documentation before changing those parameter.
 Documentation [HERE](https://www.nextflow.io/docs/latest/google.html)
 We will list here the different parameter to change and their use.
@@ -57,7 +65,7 @@ We will list here the different parameter to change and their use.
 
 
 
-### Create new profilea
+## Create new profile
 If you want to create new profile (more advanced use of the nextflow configuration).
 We recommend the creation of a specific configuration file in the configs directory and you call it in the nextflow.config file.
 Please read the documentation provided by [nextflow](https://www.nextflow.io/docs/latest/config.html) about the configuration of a pipeline before attempting any modification.
