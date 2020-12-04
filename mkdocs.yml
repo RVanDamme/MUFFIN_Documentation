@@ -1,6 +1,9 @@
 site_name: MUFFIN
 nav:
     - Home: index.md
+    - Installation: installation.md
+    - Usage: usage.md
+    - Troubleshooting: troubleshooting.md
     
 theme: 
   name: material
