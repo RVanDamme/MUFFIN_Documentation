@@ -20,7 +20,7 @@ profile     : "local,conda,test"
 
 MUFFIN comand:
 ```
-nextflow run RVanDamme/MUFFIN -params-file MUFFIN_params.yml
+nextflow run RVanDamme/MUFFIN -params-file MUFFIN_params.yml -profile local,docker
 ```
 
 ### Basic usage
