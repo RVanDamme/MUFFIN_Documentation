@@ -20,9 +20,8 @@ profile     : "local,conda,test"
 
 MUFFIN comand:
 ```
-path/to/nextflow run $MUFFIN_pipeline -params-file MUFFIN_params.yml
+nextflow run RVanDamme/MUFFIN -params-file MUFFIN_params.yml
 ```
-$MUFFIN_pipeline is either "path/to/MUFFIN/main.nf" or "RVanDamme/MUFFIN"
 
 ### Basic usage
 
