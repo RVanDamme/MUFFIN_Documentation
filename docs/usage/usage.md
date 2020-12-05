@@ -1,5 +1,29 @@
 ## Usage
 
+### Automated usage 
+To avoid writing all the parameter in the CLI you can use the additional "-params-file" and provide a .yml file that contains all the parameters available for MUFFIN and described below.
+You can find the MUFFIN_params.yml file in the base of MUFFIN directory.
+
+Exemple:
+MUFFIN_params.yml
+```
+assembler   : "metaspades"
+ouptut      : "path/to/resultdir"
+illumina    : "fastq_ill/"
+ont         : "fastq_ont/"
+cpus        : 16
+memory      : "64g"
+modular     : "full"
+profile     : "local,conda,test"
+
+```
+
+MUFFIN comand:
+```
+path/to/nextflow run $MUFFIN_pipeline -params-file MUFFIN_params.yml
+```
+$MUFFIN_pipeline is either "path/to/MUFFIN/main.nf" or "RVanDamme/MUFFIN"
+
 ### Basic usage
 
 ```

@@ -18,6 +18,7 @@ A preprint is available here https://www.biorxiv.org/content/10.1101/2020.02.08.
 4. [Test the pipeline](installation.md#test-the-pipeline)
 5. [Manual configuration](config.md#manual-configuration)
 6. [Usage](usage/usage.md#usage) :
+    - [Automated usage](#automated-usage)
     - [Basic usage](usage/usage.md#basic-usage)
     - [Advanced usage](usage/usage.md#advanced-usage)
 7. [Troubleshooting](troubleshooting.md#troubleshooting)
