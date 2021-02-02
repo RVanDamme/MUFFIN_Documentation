@@ -126,3 +126,7 @@ Code is [GPL-3.0](LICENSE)
 
 We welcome contributions from the community! See our
 [Contributing](CONTRIBUTING.md) guidelines
+
+## Logo creator
+
+The Muffin logo has been made by Tanguy Desmarez and is CC BY (Version 4) compliant
