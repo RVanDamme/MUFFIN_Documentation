@@ -1,0 +1,654 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>Configuration profile - MUFFIN</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-orange">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#manual-configuration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="MUFFIN" class="md-header-nav__button md-logo" aria-label="MUFFIN">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            MUFFIN
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Configuration profile
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../installation/" class="md-tabs__link">
+      Installation
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../usage/usage/" class="md-tabs__link">
+      Usage
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Configuration profile
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../troubleshooting/" class="md-tabs__link">
+      Troubleshooting
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MUFFIN" class="md-nav__button md-logo" aria-label="MUFFIN">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    MUFFIN
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/usage/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configuration profile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Configuration profile
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#manual-configuration" class="md-nav__link">
+    Manual Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-parameter-to-change" class="md-nav__link">
+    Current parameter to change
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-existing-profiles" class="md-nav__link">
+    Edit existing profiles
+  </a>
+  
+    <nav class="md-nav" aria-label="Edit existing profiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-cpuram-usage-in-cloud-and-local-profiles" class="md-nav__link">
+    The cpu/ram usage in cloud and local profiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-gcloud-configuration" class="md-nav__link">
+    The gcloud configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-new-profile" class="md-nav__link">
+    Create new profile
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#manual-configuration" class="md-nav__link">
+    Manual Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-parameter-to-change" class="md-nav__link">
+    Current parameter to change
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-existing-profiles" class="md-nav__link">
+    Edit existing profiles
+  </a>
+  
+    <nav class="md-nav" aria-label="Edit existing profiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-cpuram-usage-in-cloud-and-local-profiles" class="md-nav__link">
+    The cpu/ram usage in cloud and local profiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-gcloud-configuration" class="md-nav__link">
+    The gcloud configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-new-profile" class="md-nav__link">
+    Create new profile
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Configuration profile</h1>
+                
+                <h2 id="manual-configuration">Manual Configuration</h2>
+<ol>
+<li><a href="#current-parameter-to-change">Current parameter to change</a></li>
+<li><a href="#edit-existing-profiles">Edit existing profiles</a> :<ul>
+<li><a href="#The-cpu/ram-usage-in-cloud-and-local-profiles">The cpu/ram usage in cloud and local profiles</a></li>
+<li><a href="#The-gcloud-configuration">The gcloud configuration</a></li>
+</ul>
+</li>
+<li><a href="#Create-new-profile">Create new profile</a> :</li>
+</ol>
+<h2 id="current-parameter-to-change">Current parameter to change</h2>
+<p>Currently we have the nextflow.config file that contains every parameter and configuration currently available.
+If you want to edit here is a small guide to the different option to change with the line number in parenthesis:
+* Change default cpus and ram edit those lines (7-8)</p>
+<pre><code>    cpus = &quot;2&quot;
+    memory = '16g'
+</code></pre>
+<ul>
+<li>Change default input (13-17)
+If you don't want a default for a parameter change to "false" use simple quote to put a path. E.g.:</li>
+</ul>
+<pre><code>    illumina = './illumina'
+    bin_classify = false
+</code></pre>
+<ul>
+<li>Change default Databases same method as the input (20-22 &amp; 26)</li>
+</ul>
+<pre><code>    sourmash_db = false
+    sourmash_db = 'Path/to/db'
+</code></pre>
+<ul>
+<li>Change default options (29-46)</li>
+</ul>
+<pre><code>    assembler = 'metaspades'
+    modular = 'full'
+</code></pre>
+<ul>
+<li>Change default output (49)</li>
+</ul>
+<pre><code>    output = './results'
+</code></pre>
+<h2 id="edit-existing-profiles">Edit existing profiles</h2>
+<p>You can edit and configure existing profiles to work for you.
+The different parameter you can edit are:</p>
+<h3 id="the-cpuram-usage-in-cloud-and-local-profiles">The cpu/ram usage in cloud and local profiles</h3>
+<p>To do so just open the cloud.config or local.config in the configs directory and change the value.</p>
+<pre><code>    withLabel: bwa { cpus = params.cpus ; memory = params.memory } # this calls the parameter defined in nextflow.config
+    withLabel: bwa { cpus = 8 ; memory = '30g'}  # this is a user defined value
+</code></pre>
+<h3 id="the-gcloud-configuration">The gcloud configuration</h3>
+<p>Please read the nextflow documentation before changing those parameter.
+Documentation <a href="https://www.nextflow.io/docs/latest/google.html">HERE</a>
+We will list here the different parameter to change and their use.</p>
+<pre><code>    bucketDir = 'gs://bucket/work-dir' #the bucket directory where to store the temporary files of the run and the output files if desired
+    google { project = 'project-name-111111'; zone = 'europe-north1-a' } # The name of your google project and the zone to execute the run (you can change the zone parameter for region if desired)
+    google.lifeSciences.copyImage = 'google/cloud-sdk:latest' #if you want to change the original image started on google (we recommend the latest sdk)
+    google.lifeSciences.preemptible = true # if you want to run on the preemptible version of google (cheaper but risk to kill the run)
+    google.lifeSciences.bootDiskSize = &quot;20GB&quot; # the size of the boot disk, we recommend 20GB minimum
+</code></pre>
+<h2 id="create-new-profile">Create new profile</h2>
+<p>If you want to create new profile (more advanced use of the nextflow configuration).
+We recommend the creation of a specific configuration file in the configs directory and you call it in the nextflow.config file.
+Please read the documentation provided by <a href="https://www.nextflow.io/docs/latest/config.html">nextflow</a> about the configuration of a pipeline before attempting any modification.</p>
+<p>If you implement a new profile, you will also need to edit the main.nf file and add
+below line 113 if it's a engine or line 121 if it's an executer the following:</p>
+<pre><code>    workflow.profile.contains('new_profile_name') ||
+</code></pre>
+<p>This is to integrate the profile in the error handling</p>
+<p>To implement an executor profile we highly recommend to read the documentation provided by <a href="https://www.nextflow.io/docs/latest/executor.html">nextflow</a> profile.
+Once you now the different parameter required for your executer, you can add a profile after the line 54 using the following format.</p>
+<pre><code>    profilename {
+        process.executor = 'Executor_name'    
+        Additionnal_parameter1 = variable1
+        Additionnal_parameter2 = variable2
+        ......
+        includeConfig 'configs/name_specific_config.config'
+    }
+</code></pre>
+<p>In the variable possible for the executor profile you have the variable specific to a cloud service (Amazon, gcloud)
+We recommend you to read the documentation of nextflow before starting to integrate one of those cloud platform.</p>
+<p>To create an engine profile it is based on the same structure.
+You need to create a profile name (below line 87), and add the different configuration parameter.</p>
+<pre><code>    profilename {
+        process.executor = 'Executor_name'    
+        Required_parameter1 = variable1
+        Required_parameter2 = variable2
+        ......
+        includeConfig 'configs/name_specific_config2.config'
+    }
+</code></pre>
+<p>The last configuration is the additional files you call in the profiles.
+Those files are there either to pinpoint the tools and their version(container.config or conda.config) or the individual cpu/ram usage (local.config or cloud.config).
+The documentation of nextflow provide configuration exemple for conda, docker, singularity, shifter,...</p>
+<p>To create those file we recommend the copy of an existing configuration file, to have the structure and all the label (software) called by MUFFIN.
+You need then just to edit the values for cpu/ram or the container link (the nomenclature sometimes change between different container manager please read the nextflow documentation).</p>
+<p>In the mean time you can easily edit the available configuration file by following this explanation.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../usage/usage/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Usage
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../troubleshooting/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Troubleshooting
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

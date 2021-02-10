@@ -1,0 +1,849 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>MUFFIN</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-orange">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#muffin" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="." title="MUFFIN" class="md-header-nav__button md-logo" aria-label="MUFFIN">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            MUFFIN
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="." class="md-tabs__link md-tabs__link--active">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="installation/" class="md-tabs__link">
+      Installation
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="usage/usage/" class="md-tabs__link">
+      Usage
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="config/" class="md-tabs__link">
+      Configuration profile
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="troubleshooting/" class="md-tabs__link">
+      Troubleshooting
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="MUFFIN" class="md-nav__button md-logo" aria-label="MUFFIN">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    MUFFIN
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Home
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    INDEX
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#figure" class="md-nav__link">
+    Figure
+  </a>
+  
+    <nav class="md-nav" aria-label="Figure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-workflow" class="md-nav__link">
+    The Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-parser-output" class="md-nav__link">
+    The parser output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliography" class="md-nav__link">
+    BIBLIOGRAPHY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    Contributing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logo-creator" class="md-nav__link">
+    Logo creator
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="usage/usage/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="config/" class="md-nav__link">
+        Configuration profile
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    INDEX
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#figure" class="md-nav__link">
+    Figure
+  </a>
+  
+    <nav class="md-nav" aria-label="Figure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-workflow" class="md-nav__link">
+    The Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-parser-output" class="md-nav__link">
+    The parser output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliography" class="md-nav__link">
+    BIBLIOGRAPHY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    Contributing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logo-creator" class="md-nav__link">
+    Logo creator
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="muffin">MUFFIN <img src="figures/Logo_MUFFIN_cropped.png" width="240" height="160"  /></h1>
+<p>MUFFIN is a hybrid assembly and differential binning workflow for metagenomics, transcriptomics and pathway analysis.</p>
+<p>If you use MUFFIN in your research, please cite <a href="https://doi.org/10.1371/journal.pcbi.1008716">our paper</a></p>
+<h2 id="index">INDEX</h2>
+<ol>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#figure">Figure</a> :<ul>
+<li><a href="#the-workflow">Workflow</a></li>
+<li><a href="#the-parser-output">Parser output</a></li>
+</ul>
+</li>
+<li><a href="installation/#installation">Installation</a> :<ul>
+<li><a href="installation/#base-installation">base installation</a></li>
+<li><a href="installation/#for-conda-usage">conda usage</a></li>
+<li><a href="installation/#for-gcloud-usage">gcloud usage</a></li>
+<li><a href="installation/#for-containers-usage">containers usage</a></li>
+<li><a href="installation/#for-usage-of-software-installed-locally">software installed locally</a></li>
+</ul>
+</li>
+<li><a href="installation/#test-the-pipeline">Test the pipeline</a></li>
+<li><a href="config/#manual-configuration">Manual configuration</a></li>
+<li><a href="usage/usage/#usage">Usage</a> :<ul>
+<li><a href="#automated-usage">Automated usage</a></li>
+<li><a href="usage/usage/#basic-usage">Basic usage</a></li>
+<li><a href="usage/usage/#advanced-usage">Advanced usage</a></li>
+</ul>
+</li>
+<li><a href="troubleshooting/#troubleshooting">Troubleshooting</a></li>
+<li><a href="usage/usage/#options">Options</a></li>
+<li><a href="usage/usage/#complete-help-and-options">Complete help and options</a></li>
+<li><a href="#bibliography">Bibliography</a></li>
+<li><a href="#license">License</a></li>
+</ol>
+<h2 id="introduction">Introduction</h2>
+<p>MUFFIN aims at being a reproducible pipeline for metagenome assembly
+of crossed illumina and nanopore reads.</p>
+<p>MUFFIN uses the following software </p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Software</th>
+<th>Version</th>
+<th>Docker</th>
+<th>Image version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QC illumina</td>
+<td><a href="https://github.com/OpenGene/fastp">fastp</a></td>
+<td>0.20.0</td>
+<td><a href="https://hub.docker.com/r/nanozoo/fastp">LINK</a></td>
+<td>0.20.0--78a7c63</td>
+</tr>
+<tr>
+<td>QC ont</td>
+<td>automated way to discard shortest reads</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://github.com/rrwick/Filtlong">filtlong</a></td>
+<td>0.2.0</td>
+<td><a href="https://hub.docker.com/r/nanozoo/filtlong">LINK</a></td>
+<td>v0.2.0--afa175e</td>
+</tr>
+<tr>
+<td>metagenomic composition of ont</td>
+<td><a href="https://sourmash.readthedocs.io/en/latest/">sourmash</a></td>
+<td>2.0.1</td>
+<td><a href="https://hub.docker.com/r/nanozoo/sourmash">LINK</a></td>
+<td>2.0.1--6970ddc</td>
+</tr>
+<tr>
+<td>Hybrid assembly</td>
+<td><a href="http://cab.spbu.ru/software/spades/">Meta-spades</a></td>
+<td>3.13.1</td>
+<td><a href="https://hub.docker.com/r/nanozoo/spades">LINK</a></td>
+<td>3.13.1--2c2a4c0</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://github.com/rrwick/Unicycler">unicycler</a></td>
+<td>0.4.7</td>
+<td><a href="https://hub.docker.com/r/nanozoo/unicycler">LINK</a></td>
+<td>0.4.7-0--c0404e6</td>
+</tr>
+<tr>
+<td>Long read assembly</td>
+<td><a href="https://github.com/fenderglass/Flye">MetaFlye</a></td>
+<td>2.7</td>
+<td><a href="https://hub.docker.com/r/nanozoo/flye">LINK</a></td>
+<td>2.7--957a1a1</td>
+</tr>
+<tr>
+<td>polishing</td>
+<td><a href="https://github.com/lbcb-sci/racon">racon</a></td>
+<td>1.4.13</td>
+<td><a href="https://hub.docker.com/r/nanozoo/racon">LINK</a></td>
+<td>1.4.13--bb8a908</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://github.com/nanoporetech/medaka">medaka</a></td>
+<td>1.0.3</td>
+<td><a href="https://hub.docker.com/r/nanozoo/medaka">LINK</a></td>
+<td>1.0.3--7c62d67</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://github.com/broadinstitute/pilon/wiki">pilon</a></td>
+<td>1.23</td>
+<td><a href="https://hub.docker.com/r/nanozoo/pilon">LINK</a></td>
+<td>1.23--b21026d</td>
+</tr>
+<tr>
+<td>mapping</td>
+<td><a href="https://github.com/lh3/minimap2">minimap2</a></td>
+<td>2.17</td>
+<td><a href="https://hub.docker.com/r/nanozoo/minimap2">LINK</a></td>
+<td>2.17--caba7af</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://bio-bwa.sourceforge.net/">bwa</a></td>
+<td>0.7.17</td>
+<td><a href="https://hub.docker.com/r/nanozoo/pilon">LINK</a></td>
+<td>1.23--b21026d</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.htslib.org/">samtools</a></td>
+<td>1.9</td>
+<td><a href="https://hub.docker.com/r/nanozoo/minimap2">LINK</a></td>
+<td>2.17--caba7af</td>
+</tr>
+<tr>
+<td>retrieve reads mapped to contig</td>
+<td><a href="https://github.com/lh3/seqtk">seqtk</a></td>
+<td>1.3</td>
+<td><a href="https://hub.docker.com/r/nanozoo/seqtk">LINK</a></td>
+<td>1.3--dc0d16b</td>
+</tr>
+<tr>
+<td>Binning</td>
+<td><a href="https://bitbucket.org/berkeleylab/metabat/src/master/">Metabat2</a></td>
+<td>2.13</td>
+<td><a href="https://hub.docker.com/r/nanozoo/metabat2">LINK</a></td>
+<td>2.13--0e2577e</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://sourceforge.net/projects/maxbin2/">maxbin2</a></td>
+<td>2.2.7</td>
+<td><a href="https://hub.docker.com/r/nanozoo/maxbin2">LINK</a></td>
+<td>2.2.7--b643a6b</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://github.com/BinPro/CONCOCT">concoct</a></td>
+<td>1.1.0</td>
+<td><a href="https://hub.docker.com/r/nanozoo/concoct">LINK</a></td>
+<td>1.1.0--03a3888</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://github.com/bxlab/metaWRAP">metawrap</a></td>
+<td>1.2.2</td>
+<td><a href="https://hub.docker.com/r/nanozoo/metawrap">LINK</a></td>
+<td>1.2.2--de94241</td>
+</tr>
+<tr>
+<td>qc binning</td>
+<td><a href="https://ecogenomics.github.io/CheckM/">checkm</a></td>
+<td>1.0.13</td>
+<td><a href="https://hub.docker.com/r/nanozoo/nanoplot">LINK</a></td>
+<td>1.0.13--248242f</td>
+</tr>
+<tr>
+<td>Taxonomic Classification</td>
+<td><a href="https://sourmash.readthedocs.io/en/latest/">sourmash</a> using the <a href="https://gtdb.ecogenomic.org/">gt-DataBase</a></td>
+<td>2.0.1</td>
+<td><a href="https://hub.docker.com/r/nanozoo/sourmash">LINK</a></td>
+<td>2.0.1--6970ddc</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://gtdb.ecogenomic.org/">GTDB</a></td>
+<td>version r89</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Annotations (bin and RNA)</td>
+<td><a href="https://github.com/eggnogdb/eggnog-mapper/wiki/eggNOG-mapper-v2">eggNOG</a></td>
+<td>2.0.1</td>
+<td><a href="https://hub.docker.com/r/nanozoo/eggnog-mapper">LINK</a></td>
+<td>2.0.1--d5e0c8c</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://eggnog5.embl.de/#/app/home">eggNOG DB</a></td>
+<td>v5.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>De novo</em> transcript and quantification</td>
+<td><a href="https://github.com/trinityrnaseq/trinityrnaseq/wiki">Trinity</a></td>
+<td>2.9.1</td>
+<td><a href="https://hub.docker.com/r/nanozoo/trinity">LINK</a></td>
+<td>2.9.1--82fe26c</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://github.com/COMBINE-lab/salmon">Salmon</a></td>
+<td>0.15.0</td>
+<td><a href="https://hub.docker.com/r/nanozoo/trinity">LINK</a></td>
+<td>2.9.1--82fe26c</td>
+</tr>
+</tbody>
+</table>
+<h2 id="figure">Figure</h2>
+<h3 id="the-workflow">The Workflow</h3>
+<p><img alt="MUFFIN FLOWCHART FIGURE" src="figures/Muffin_Workflow_simple.png" /></p>
+<h3 id="the-parser-output">The parser output</h3>
+<p><img alt="PARSER OUTPUT FIGURE" src="figures/PANKEGG_simple.png" /></p>
+<h2 id="bibliography">BIBLIOGRAPHY</h2>
+<p>BWA: Li H. and Durbin R. (2009) Fast and accurate short read alignment with Burrows-Wheeler Transform. Bioinformatics, 25:1754-60. [PMID: 19451168] </p>
+<p>CheckM: Parks DH, Imelfort M, Skennerton CT, Hugenholtz P, Tyson GW. 2015. CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes. Genome Research, 25: 1043–1055.</p>
+<p>Concoct: Johannes Alneberg, Brynjar Smári Bjarnason, Ino de Bruijn, Melanie Schirmer, Joshua Quick, Umer Z Ijaz, Leo Lahti, Nicholas J Loman, Anders F Andersson &amp; Christopher Quince. 2014. Binning metagenomic contigs by coverage and composition. Nature Methods, doi: 10.1038/nmeth.3103 </p>
+<p>Fastp: Shifu Chen, Yanqing Zhou, Yaru Chen, Jia Gu; fastp: an ultra-fast all-in-one FASTQ preprocessor, Bioinformatics, Volume 34, Issue 17, 1 September 2018, Pages i884–i890, https://doi.org/10.1093/bioinformatics/bty560</p>
+<p>Filtlong: https://github.com/rrwick/Filtlong</p>
+<p>Flye: Mikhail Kolmogorov, Jeffrey Yuan, Yu Lin and Pavel Pevzner, "Assembly of Long Error-Prone Reads Using Repeat Graphs", Nature Biotechnology, 2019 doi:10.1038/s41587-019-0072-8</p>
+<p>HMMER: http://hmmer.org/ </p>
+<p>Maxbin2: Wu YW, Tang YH, Tringe SG, Simmons BA, and Singer SW, "MaxBin: an automated binning method to recover individual genomes from metagenomes using an expectation-maximization algorithm", Microbiome, 2:26, 2014.</p>
+<p>Medaka: https://github.com/nanoporetech/medaka</p>
+<p>Metabat2: Kang DD, Froula J, Egan R, Wang Z. MetaBAT, an efficient tool for accurately reconstructing single genomes from complex microbial communities. PeerJ 2015;3:e1165. doi:10.7717/peerj.1165</p>
+<p>Metawrap: Uritskiy, G.V., DiRuggiero, J. and Taylor, J. (2018). MetaWRAP—a flexible pipeline for genome-resolved metagenomic data analysis. Microbiome, 6(1). https://doi.org/10.1186/s40168-018-0541-1</p>
+<p>Minimap2: Li, H. (2018). Minimap2: pairwise alignment for nucleotide sequences. Bioinformatics, 34:3094-3100. doi:10.1093/bioinformatics/bty191</p>
+<p>Pilon: Bruce J. Walker, Thomas Abeel, Terrance Shea, Margaret Priest, Amr Abouelliel, Sharadha Sakthikumar, Christina A. Cuomo, Qiandong Zeng, Jennifer Wortman, Sarah K. Young, Ashlee M. Earl (2014) Pilon: An Integrated Tool for Comprehensive Microbial Variant Detection and Genome Assembly Improvement. PLoS ONE 9(11): e112963. doi:10.1371/journal.pone.0112963</p>
+<p>pplacer: Matsen FA, Kodner RB, Armbrust EV. 2010. pplacer: linear time maximum-likelihood and Bayesian phylogenetic placement of sequences onto a fixed reference tree. BMC Bioinformatics 11: doi:10.1186/1471-2105-11-538.</p>
+<p>prodigal: Hyatt D, Locascio PF, Hauser LJ, Uberbacher EC. 2012. Gene and translation initiation site prediction in metagenomic sequences. Bioinformatics 28: 2223–2230.</p>
+<p>Racon: Vaser R, Sovic I, Nagarajan N, Sikic M. 2017. Fast and accurate de novogenome assembly from long uncorrected reads. Genome Res 27:737–746.https://doi.org/10.1101/gr.214270.116</p>
+<p>Samtools: Li H, Handsaker B, Wysoker A, Fennell T, Ruan J, Homer N, Marth G, Abecasis G, Durbin R, and 1000 Genome Project Data Processing Subgroup, The Sequence alignment/map (SAM) format and SAMtools, Bioinformatics (2009) 25(16) 2078-9 [19505943]</p>
+<p>Seqtk: https://github.com/lh3/seqtk</p>
+<p>Sourmash: Brown et al, (2016), sourmash: a library for MinHash sketching of DNA, Journal of Open Source Software, 1(5), 27, doi:10.21105/joss.00027</p>
+<p>Spades:  Lapidus A., Antipov D., Bankevich A., Gurevich A., Korobeynikov A., Nurk S., Prjibelski A., Safonova Y., Vasilinetc I., Pevzner P. A. New Frontiers of Genome Assembly with SPAdes 3.0.    (poster), 2014 </p>
+<p>Unicycler: Wick RR, Judd LM, Gorrie CL, Holt KE (2017) Unicycler: Resolving bacterial genome assemblies from short and long sequencing reads. PLoS Comput Biol 13(6): e1005595. https://doi.org/10.1371/journal.pcbi.1005595</p>
+<h2 id="license">License</h2>
+<p>Code is <a href="LICENSE">GPL-3.0</a></p>
+<h2 id="contributing">Contributing</h2>
+<p>We welcome contributions from the community! See our
+<a href="CONTRIBUTING.md">Contributing</a> guidelines</p>
+<h2 id="logo-creator">Logo creator</h2>
+<p>The Muffin logo has been made by Tanguy Desmarez and is CC BY (Version 4) compliant</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+        
+          <a href="installation/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Installation
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

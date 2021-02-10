@@ -1,0 +1,841 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>Usage - MUFFIN</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-orange">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#usage" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="MUFFIN" class="md-header-nav__button md-logo" aria-label="MUFFIN">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            MUFFIN
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Usage
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../installation/" class="md-tabs__link">
+      Installation
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Usage
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../config/" class="md-tabs__link">
+      Configuration profile
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../troubleshooting/" class="md-tabs__link">
+      Troubleshooting
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MUFFIN" class="md-nav__button md-logo" aria-label="MUFFIN">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    MUFFIN
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Usage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Usage
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automated-usage" class="md-nav__link">
+    Automated usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    Basic usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-usage" class="md-nav__link">
+    Advanced usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-cpus" class="md-nav__link">
+    --cpus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-mem" class="md-nav__link">
+    --mem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-assembler" class="md-nav__link">
+    --assembler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-illumina" class="md-nav__link">
+    --illumina
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-nanopore" class="md-nav__link">
+    --nanopore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-output" class="md-nav__link">
+    --output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-profile" class="md-nav__link">
+    -profile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-help-and-options" class="md-nav__link">
+    Complete help and options
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/" class="md-nav__link">
+        Configuration profile
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automated-usage" class="md-nav__link">
+    Automated usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    Basic usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-usage" class="md-nav__link">
+    Advanced usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-cpus" class="md-nav__link">
+    --cpus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-mem" class="md-nav__link">
+    --mem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-assembler" class="md-nav__link">
+    --assembler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-illumina" class="md-nav__link">
+    --illumina
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-nanopore" class="md-nav__link">
+    --nanopore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-output" class="md-nav__link">
+    --output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-profile" class="md-nav__link">
+    -profile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-help-and-options" class="md-nav__link">
+    Complete help and options
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Usage</h1>
+                
+                <h2 id="usage">Usage</h2>
+<h3 id="automated-usage">Automated usage</h3>
+<p>To avoid writing all the parameter in the CLI you can use the additional "-params-file" and provide a .yml file that contains all the parameters available for MUFFIN and described below.
+You can find the MUFFIN_params.yml file in the base of MUFFIN directory.</p>
+<p>Exemple:
+MUFFIN_params.yml</p>
+<pre><code>assembler   : &quot;metaspades&quot;
+ouptut      : &quot;path/to/resultdir&quot;
+illumina    : &quot;fastq_ill/&quot;
+ont         : &quot;fastq_ont/&quot;
+cpus        : 16
+memory      : &quot;64g&quot;
+modular     : &quot;full&quot;
+</code></pre>
+<p>MUFFIN comand:</p>
+<pre><code>path/to/nextflow run $MUFFIN_pipeline -params-file MUFFIN_params.yml -profile local,conda,test
+</code></pre>
+<p>$MUFFIN_pipeline is either "path/to/MUFFIN/main.nf" or "RVanDamme/MUFFIN"</p>
+<h3 id="basic-usage">Basic usage</h3>
+<pre><code>path/to/nextflow run $MUFFIN_pipeline --output results_dir --assembler $assembler --illumina fastq_ill/ --ont fastq_ont/ --cpus 16 --memory 64g --modular full -profile $profile_executor,$profile_engine
+</code></pre>
+<p>$MUFFIN_pipeline is either "path/to/MUFFIN/main.nf" or "RVanDamme/MUFFIN"</p>
+<p>$assembler is either:
+  - "metaspades" for hybrid assembly
+  - "metaflye" for long-read assembly with short-reads polishing</p>
+<p><strong>What assembly approach should i use? (metaspades vs flye)</strong></p>
+<p>Chose your assembly approach based on the amount of data (in Gigabases). If you have more short reads go for meta-spades, more long-reads? Go for flye. However, if you have over 15 Gigabases of long read data, flye might always be the better option regardless of Illumina throughput as you get good complete genome drafts.  As the each sample influences the outcome heavily we recommend in trying both if you are unsure.</p>
+<p>$profile_executor can be:
+  - "local" to run on your computer
+  - "gcloud" to run on google life science cloud computing (you need to setup your project in nextflow.config)
+  - "slurm" to run on HPC using slurm (e.g. UPPMAX)</p>
+<p>$profile_engine can be:
+  - "local_engine" to execute the software installed locally
+  - "conda" to execute using conda installation
+  - "docker" and "singularity" to execute using the docker container</p>
+<p>You can add "-resume" at the end of the command to restart it while keeping the process that succeeded
+This is often used in case or error in the pipeline or if you modify slightly the command and want to avoid running everything again.
+One exemple is to run the pipeline without RNA and rerun it adding RNA data, in this specific case the second time you add:</p>
+<pre><code>--rna path/to/rna -resume
+</code></pre>
+<p>Only the transcript processes and final parsing will be run</p>
+<h3 id="advanced-usage">Advanced usage</h3>
+<p>You can use RNA data to have transcriptomics analysis to do so add "--rna path/to/fastq_rna/"</p>
+<p>You can run only partially the pipeline to do so change --modular to the right parameter:
+ - "full" run the 3 steps of MUFFIN (assemble, classify, annotate)
+ - "assemble" run the assembly and binning
+ - "classify" run the classification of the bins (require a different input)
+ - "annotate" run the annotation step of the bins (require a different input) and RNA if provided
+ - "assemb-class" run assemble and classify step
+ - "assemb-annot" run assemble and classify step
+ - "class-annot" run classify and annotate step (require a different input)</p>
+<p>To run classify and annotate independently from the assemble you need to provide a CSV file of the bins
+The structure of the file should correspond to:</p>
+<pre><code>Samplename,path/to/bin1.fa
+Samplename,path/to/bin2.fa
+...
+Samplename,path/to/binX.fa
+Samplename,path/to/binY.fa
+</code></pre>
+<p>If you run "classify" with or without "annotation" use "--bin_classify"
+If you run "annotate" without "classify" use "--bin_annotate"</p>
+<h2 id="options">Options</h2>
+<h3 id="-cpus">--cpus</h3>
+<ul>
+<li>number of thread available</li>
+<li>default 2</li>
+</ul>
+<h3 id="-mem">--mem</h3>
+<ul>
+<li>number of memory available</li>
+<li>default 16g</li>
+</ul>
+<h3 id="-assembler">--assembler</h3>
+<ul>
+<li>which method to use</li>
+<li>can be Hybrid with metaspades or long read + polishing with metaflye</li>
+<li>required</li>
+</ul>
+<h3 id="-illumina">--illumina</h3>
+<ul>
+<li>location of the dir containing the forward and reverse illumina reads in fasta or fastq </li>
+<li>required</li>
+</ul>
+<h3 id="-nanopore">--nanopore</h3>
+<ul>
+<li>location of the dir containing the nanopore reads in fasta or fastq</li>
+<li>required</li>
+</ul>
+<h3 id="-output">--output</h3>
+<ul>
+<li>output directory</li>
+<li>required</li>
+</ul>
+<h3 id="-profile">-profile</h3>
+<ul>
+<li>engine and executor</li>
+<li>required</li>
+<li>engine: local_engine, conda, docker, singularity</li>
+<li>executor: local, gcloud, slurm</li>
+</ul>
+<h2 id="complete-help-and-options">Complete help and options</h2>
+<pre><code>    *********hybrid assembly and differential binning workflow for metagenomics, transcriptomics and pathway analysis*********
+
+    MUFFIN is still under development please wait until the first non edge version realease before using it.
+    Please cite us using https://www.biorxiv.org/content/10.1101/2020.02.08.939843v1
+
+    Mafin is composed of 3 part the assembly of potential metagenome assembled genomes (MAGs); the classification of the MAGs; and the annotation of the MAGs.
+
+        Usage example:
+    nextflow run RVanDamme/MUFFIN --output result --ont nanopore/ --illumina illumina/ --assembler metaspades --rna rna/ -profile local,docker
+    or 
+    nextflow run RVanDamme/MUFFIN --output result --ont nanopore/ --illumina illumina/ --assembler metaflye -profile local,docker
+
+        Input:
+    --ont                       path to the directory containing the nanopore read file (fastq) (default: $params.ont)
+    --illumina                  path to the directory containing the illumina read file (fastq) (default: $params.illumina)
+    --rna                       path to the directory containing the RNA-seq read file (fastq) (default: none)
+    --bin_classify              path to the directory containing the bins files to classify (default: none)
+    --bin_annotate              path to the directory containing the bins files to annotate (default: none)
+    --assembler                 the assembler to use in the assembly step (default: $params.assembler)
+
+        Optional input:
+    --check_db                  path to the checkm database
+    --check_tar_db              path to the checkm database tar compressed
+    --sourmash_db               path to the LCA database for sourmash (default: GTDB LCA formated)
+    --eggnog_db                 path to the eggNOG database
+
+        Output:
+    --output                    path to the output directory (default: $params.output)
+
+        Outputed files:
+        You can see the output structure at https://osf.io/a6hru/
+    QC                          The reads file after qc
+    Assembly                    The assembly contigs file 
+    Bins                        The bins produced by CONCOCT, MetaBAT2, MaxBin2 and MetaWRAP (the refining of bins)
+    Mapped bin reads            The fastq files containing the reads mapped to each metawrap bin
+    Unmapped bin reads          The fastq files containing the unmmaped reads of illumina and nanopore
+    Reassembly                  The reassembly files of the bins (.fa and .gfa)
+    Checkm                      Various file outputed by CheckM (summary, taxonomy, plots and output dir)
+    Sourmash                    The classification done by sourmash
+    Classify summary            The summary of the classification and quality control of the bins (csv file)
+    RNA output                  The de novo assembled transcript and the quantification by Salmon
+    Annotation                  The annotations files from eggNOG (tsv format)
+    Parsed output               HTML files that summarize the annotations and show graphically the pathways
+
+
+
+
+        Basic Parameter:
+    --cpus                      max cores for local use [default: $params.cpus]
+    --memory                    80% of available RAM in GB for --metamaps [default: $params.memory]
+
+
+        Workflow Options:
+    --skip_ill_qc               skip quality control of illumina files
+    --skip_ont_qc               skip quality control of nanopore file
+    --short_qc                  minimum size of the reads to be kept (default: $params.short_qc )
+    --filtlong                  use filtlong to improve the quality furthermore (default: false)
+    --model                     the model medaka will use (default: $params.model)
+    --polish_iteration          number of iteration of pilon in the polish step (default: $params.polish_iteration)
+    --extra_ill                 a list of additional ill sample file (with full path with a * instead of _R1,2.fastq) to use for the binning in Metabat2 and concoct
+    --extra_ont                 a list of additional ont sample file (with full path) to use for the binning in Metabat2 and concoct
+    --skip_metabat2             skip the binning using metabat2 (advanced)
+    --skip_maxbin2              skip the binning using maxbin2 (advanced)
+    --skip_concoct              skip the binning using concoct (advanced)
+
+        Nextflow options:
+    -profile                    change the profile of nextflow both the engine and executor more details on github README
+    -resume                     resume the workflow where it stopped
+    -with-report rep.html       cpu / ram usage (may cause errors)
+    -with-dag chart.html        generates a flowchart for the process tree
+    -with-timeline time.html    timeline (may cause errors)
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../installation/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Installation
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../config/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Configuration profile
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
